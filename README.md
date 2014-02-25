@@ -1,2 +1,2 @@
-squiddlefiddle
+squiddlefiddle.com
 ==============
