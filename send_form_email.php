@@ -2,16 +2,11 @@
 
 if(isset($_POST['email'])) {
 
-
-
     // EDIT THE 2 LINES BELOW AS REQUIRED
 
-    $email_to = "dora@leifdesigns.com";
+    $email_to = "info@leifup.com";
 
-    $email_subject = "Your email subject line";
-
-
-
+    $email_subject = "Test";
 
 
     function died($error) {
@@ -30,8 +25,6 @@ if(isset($_POST['email'])) {
 
     }
 
-
-
     // validation expected data exists
 
     if(!isset($_POST['first_name']) ||
@@ -45,10 +38,7 @@ if(isset($_POST['email'])) {
         !isset($_POST['comments'])) {
 
         died('We are sorry, but there appears to be a problem with the form you submitted.');
-
     }
-
-
 
     $first_name = $_POST['first_name']; // required
 
@@ -59,8 +49,6 @@ if(isset($_POST['email'])) {
     $telephone = $_POST['telephone']; // not required
 
     $comments = $_POST['comments']; // required
-
-
 
     $error_message = "";
 
@@ -101,7 +89,6 @@ if(isset($_POST['email'])) {
     $email_message = "Form details below.\n\n";
 
 
-
     function clean_string($string) {
 
       $bad = array("content-type","bcc:","to:","cc:","href");
@@ -123,9 +110,6 @@ if(isset($_POST['email'])) {
     $email_message .= "Comments: ".clean_string($comments)."\n";
 
 
-
-
-
 // create email headers
 
 $headers = 'From: '.$email_from."\r\n".
@@ -138,15 +122,9 @@ $headers = 'From: '.$email_from."\r\n".
 
 ?>
 
-
-
 <!-- include your own success html here -->
 
-
-
 Thank you for contacting us. We will be in touch with you very soon.
-
-
 
 <?php
 
