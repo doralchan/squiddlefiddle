@@ -1,5 +1,5 @@
 <?php
-$ToEmail = 'leifdesigns@web434.webfaction.com';
+$to = 'info@leifup.com';
 $EmailSubject = 'Site contact form';
 $mailheader = "From: ".$_POST["email"]."\r\n";
 $mailheader .= "Reply-To: ".$_POST["email"]."\r\n";
