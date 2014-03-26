@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form submission</title>
+</head>
+<body>
 <?php
 $to = 'info@leifup.com';
 $EmailSubject = 'Site contact form';
@@ -9,3 +15,5 @@ $MESSAGE_BODY .= "Email: ".$_POST["email"]."";
 $MESSAGE_BODY .= "Comment: ".nl2br($_POST["comment"])."";
 mail($ToEmail, $EmailSubject, $MESSAGE_BODY, $mailheader) or die ("Failure");
 ?>
+</body>
+</html>
