@@ -15,8 +15,8 @@ $(document).ready(function(){
 
         $pot.css({
             'transform': 'rotate(' + ($body.scrollTop() / bodyHeight * 360) + 'deg)',
-            'left':position,
-            'top':(position/5),
+            'right':position,
+            'bottom':position,
         }
 
                 );
