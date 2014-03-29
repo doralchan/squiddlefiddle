@@ -4,6 +4,11 @@ $(document).ready(function(){
     $body = $(document.body),
     bodyHeight = $body.height();
 
+
+    $('#pot').css({'marginTop': $(window).height()-$(pot).height()/3});
+
+
+
     $(window).scroll(function () {
         var s = $(this).scrollTop(),
             d = $(document).height(),
@@ -14,7 +19,7 @@ $(document).ready(function(){
         var position = (scrollPercent * ($(document).width() - $pot.width()));
 
         $pot.css({
-            'transform': 'rotate(' + ($body.scrollTop() / bodyHeight * 360) + 'deg)',
+            'transform': 'rotate(' + ($body.scrollTop() / bodyHeight * 500) + 'deg)',
             'right':position,
             'bottom':position,
         }
