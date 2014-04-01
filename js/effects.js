@@ -1,13 +1,15 @@
 $(document).ready(function(){
 
+    $(window).resize(function() {
+        location.reload(true);
+    });
+
     var $pot = $('#pot'),
     $body = $(document.body),
     bodyHeight = $body.height();
 
 
     $('#pot').css({'marginTop': $(window).height()-$(pot).height()/3});
-
-
 
     $(window).scroll(function () {
         var s = $(this).scrollTop(),
@@ -22,8 +24,6 @@ $(document).ready(function(){
             'transform': 'rotate(' + ($body.scrollTop() / bodyHeight * 500) + 'deg)',
             'right':position,
             'bottom':position,
-        }
-
-                );
+        });
     });
 });
