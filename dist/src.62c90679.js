@@ -19833,7 +19833,7 @@ var App = function App() {
     _react2.default.createElement(
       "h1",
       null,
-      "Hello Parcel"
+      "Hello world"
     )
   );
 };
@@ -19867,7 +19867,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64784' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '65358' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
