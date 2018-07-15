@@ -1,12 +1,8 @@
 import React from "react";
-import { render } from "react-dom";
-import "./sass/main.scss";
+import ReactDOM from "react-dom";
 
-const App = () => {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-  )
+const Index = () => {
+  return <div>Hello React!</div>;
 };
-render( <App/> , document.getElementById("app"));
+
+ReactDOM.render(<Index />, document.getElementById("index"));
