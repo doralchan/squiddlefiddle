@@ -6,6 +6,7 @@
   "author": "dorachan <dora.l.chan@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
