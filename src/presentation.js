@@ -1,18 +1,7 @@
-// Import React
 import React from 'react';
+import { Deck, Slide, Heading, Image, Appear, Text } from 'spectacle';
 
-// Import Spectacle Core tags
-import {
-  Deck,
-  Heading,
-  Slide,
-  Text,
-} from 'spectacle';
-
-// Import theme
 import createTheme from 'spectacle/lib/themes/default';
-
-// Require CSS
 require('normalize.css');
 
 const theme = createTheme(
@@ -24,49 +13,50 @@ const theme = createTheme(
   },
   {
     primary: {
-      name: 'DM Serif Display'
+      name: 'DM Serif Display',
+      googleFont: true
     },
-    secondary: 'Open Sans',
+    secondary: {
+      name: 'Open Sans',
+      googleFont: true
+    }
   }
 );
 
-export default class Presentation extends React.Component {
+const images = {
+  profile: require('./assets/profile.svg'),
+  dots: require('./assets/dots.svg')
+};
+
+class Presentation extends React.Component {
   render() {
     return (
       <Deck
         transition={['zoom', 'slide']}
-        transitionDuration={500}
-        theme={theme}
+        transitionDuration={ 500 }
+        theme={ theme }
       >
-      <Slide transition={['fade']} bgColor="tertiary">
-        <Heading size={6} textColor='primary'>
-          Typography
-        </Heading>
-        <Heading size={1} textColor="secondary">
-          Heading 1
-        </Heading>
-        <Heading size={2} textColor="secondary">
-          Heading 2
-        </Heading>
-        <Heading size={3} textColor="secondary">
-          Heading 3
-        </Heading>
-        <Heading size={4} textColor="secondary">
-          Heading 4
-        </Heading>
-        <Heading size={5} textColor="secondary">
-          Heading 5
-        </Heading>
-        <Text textSize='24px' textFont='secondary' textColor="secondary">
-          Standard text
-        </Text>
-      </Slide>
-        <Slide transition={['zoom']} bgColor="primary">
-          <Heading size={4} bold={false} textColor="secondary">
-            Hello There
-          </Heading>
+        <Slide bgColor='secondary'>
+          <Heading size={3} textColor='primary' bold={ false }>Hello There</Heading>
+          <Appear><div><Text>Test</Text></div></Appear>
+        </Slide>
+        <Slide>
+          <Heading size={4} textColor='secondary' bold={ false }>Bits of Work</Heading>
+          <Image src={ images.dots } width={ 80 } />
+        </Slide>
+        <Slide bgColor='tertiary'>
+          <div className='Test'>
+            <Heading size={5} textColor='primary' bold={false}>Project 1</Heading>
+            <Heading size={5} textColor='primary' bold={false}>Project Name</Heading>
+          </div>
+        </Slide>
+        <Slide bgColor='primary'>
+          <Heading size={3} textColor='secondary' bold={ false }>El Fin</Heading>
+          <Image src={images.profile} width={600} />
         </Slide>
       </Deck>
     );
   }
 }
+
+export default Presentation
