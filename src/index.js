@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
-=======
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -39,4 +30,3 @@ if (module.hot) {
     );
   });
 }
->>>>>>> master
