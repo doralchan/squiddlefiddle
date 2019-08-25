@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import { Slide, Heading } from 'spectacle';
 import Table from '../table';
 
@@ -9,7 +8,6 @@ import './style.scss';
 class Cover extends Component {
   static propTypes = {
     projectName: PropTypes.string,
-    projectNumber: PropTypes.string,
     companyName: PropTypes.oneOf(['Square', 'Gusto', 'AuditFile', 'Freelance']),
     managerNumber: PropTypes.string,
     engineerNumber: PropTypes.string,
@@ -20,19 +18,18 @@ class Cover extends Component {
   static defaultProps = {
     companyName: 'Square',
     projectName: 'Project Name',
-    projectNumber: '1',
     managerNumber: '1',
     engineerNumber: '1',
     designerNumber: '1',
-    projectStatus: 'Released'
+    projectStatus: 'Status'
   }
 
   render() {
     return (
       <Slide bgColor='tertiary' className='slide-cover'>
         <div className='cover'>
-          <Heading size={ 6 } textColor='secondary' className='margin-bottom-32px'>
-            { 'Project ' + this.props.projectNumber }
+          <Heading size={ 6 } textColor='secondary' className='margin-bottom-24px'>
+            Project
           </Heading>
           <Heading size={ 3 } textColor='primary' className='margin-bottom-32px'>
             { this.props.projectName }

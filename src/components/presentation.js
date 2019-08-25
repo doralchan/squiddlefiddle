@@ -3,6 +3,7 @@ import { Deck, Slide, Heading, Image } from 'spectacle';
 
 import Cover from './cover';
 import QA from './qa';
+import Sheet from './sheet';
 
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -31,15 +32,24 @@ class Presentation extends React.Component {
         transitionDuration={ 500 }
         theme={ theme }>
         <Slide bgColor='secondary'>
-          <Heading size={3} textColor='primary'>Hello There</Heading>
+          <Heading size={2} textColor='primary'>Hello There</Heading>
         </Slide>
         <Slide>
           <Heading size={4} textColor='secondary'>Bits of Work</Heading>
           <Image src={ images.dots } width={ 80 } />
         </Slide>
-        <Cover projectStatus='Beta' projectName='Business Setup' engineerNumber='2' />
-        <Cover projectNumber='2' projectStatus='Alpha' projectName='Timecards' managerNumber='2' engineerNumber='3' designerNumber='2'/>
-        <Cover projectNumber='3' projectName='Chat' companyName='Gusto' />
+        <Cover projectName='Business Setup' engineerNumber='2' projectStatus='Beta' />
+        <Sheet headingType='Context'></Sheet>
+        <Sheet headingType='Analysis'></Sheet>
+        <Sheet headingType='Design'></Sheet>
+        <Cover projectName='Timecards' managerNumber='2' engineerNumber='3' designerNumber='2' projectStatus='Alpha' />
+        <Sheet headingType='Context'></Sheet>
+        <Sheet headingType='Analysis'></Sheet>
+        <Sheet headingType='Design'></Sheet>
+        <Cover projectName='Chat Tool' companyName='Gusto' projectStatus='Released' />
+        <Sheet headingType='Context'></Sheet>
+        <Sheet headingType='Analysis'></Sheet>
+        <Sheet headingType='Design'></Sheet>
         <QA />
       </Deck>
     );

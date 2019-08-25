@@ -1,0 +1,27 @@
+@import '../../styles/breakpoints';
+
+// Sheet Styles
+
+.slide-sheet {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: [C1]120px [C2]1fr [C3];
+  height: 750px;
+
+  @media #{$desktopxl} {
+    max-width: 1200px !important;
+  }
+
+}
+
+.slide-sheet-type {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+.slide-sheet-content {
+  font-family: 'Open Sans';
+  font-size: 0.8em;
+  grid-column: C2/C3;
+  text-align: left;
+}
