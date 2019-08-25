@@ -7,7 +7,7 @@ import './style.scss';
 class Sheet extends Component {
   static propTypes = {
     children: PropTypes.node,
-    headingType: PropTypes.oneOf(['Context', 'Analysis', 'Design']),
+    headingType: PropTypes.oneOf(['Context', 'Design']),
     headingNumber: PropTypes.string
   }
 
@@ -20,7 +20,7 @@ class Sheet extends Component {
     switch ( this.props.headingType ) {
       case 'Context':
         return '01';
-      case 'Analysis':
+      case 'Design':
         return '02'
       default:
         return '03'

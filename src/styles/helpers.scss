@@ -33,7 +33,7 @@ $directions: (center, left, right);
 @each $side in $sides {
 
   .border-#{$side} {
-    border-#{$side}: 1px solid var(--color-gray-light) !important;
+    border-#{$side}: 1px solid #d7d6d0 !important;
   }
 
   .border-#{$side}-none {
@@ -41,7 +41,7 @@ $directions: (center, left, right);
   }
 
   .border-all {
-    border: 1px solid var(--color-gray-light) !important;
+    border: 1px solid #d7d6d0 !important;
   }
 
 }
