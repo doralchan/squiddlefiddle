@@ -13,6 +13,7 @@ class Cover extends Component {
     companyName: PropTypes.oneOf(['Square', 'Gusto', 'AuditFile', 'Freelance']),
     managerNumber: PropTypes.string,
     engineerNumber: PropTypes.string,
+    designerNumber: PropTypes.string,
     projectStatus: PropTypes.string
   }
 
@@ -22,6 +23,7 @@ class Cover extends Component {
     projectNumber: '1',
     managerNumber: '1',
     engineerNumber: '1',
+    designerNumber: '1',
     projectStatus: 'Released'
   }
 
@@ -40,7 +42,7 @@ class Cover extends Component {
             <Table.Row category='Status' description={ this.props.projectStatus } />
             <Table.Row category='Product Managers' description={ this.props.managerNumber } />
             <Table.Row category='Engineers' description={ this.props.engineerNumber } />
-            <Table.Row category='Product Designers' description='1' />
+            <Table.Row category='Product Designers' description={ this.props.designerNumber} />
           </Table>
         </div>
       </Slide>

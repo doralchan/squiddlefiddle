@@ -38,6 +38,8 @@ class Presentation extends React.Component {
           <Image src={ images.dots } width={ 80 } />
         </Slide>
         <Cover projectStatus='Beta' projectName='Business Setup' engineerNumber='2' />
+        <Cover projectNumber='2' projectStatus='Alpha' projectName='Timecards' managerNumber='2' engineerNumber='3' designerNumber='2'/>
+        <Cover projectNumber='3' projectName='Chat' companyName='Gusto' />
         <Slide>
           <Image src={ images.profile } width={ 600 } />
         </Slide>
