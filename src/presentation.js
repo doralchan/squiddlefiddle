@@ -12,14 +12,8 @@ const theme = createTheme(
     quaternary: '#ffffff',
   },
   {
-    primary: {
-      name: 'DM Serif Display',
-      googleFont: true
-    },
-    secondary: {
-      name: 'Open Sans',
-      googleFont: true
-    }
+    primary: 'DM Serif Display',
+    secondary: 'Open Sans'
   }
 );
 
@@ -34,8 +28,7 @@ class Presentation extends React.Component {
       <Deck
         transition={['zoom', 'slide']}
         transitionDuration={ 500 }
-        theme={ theme }
-      >
+        theme={ theme }>
         <Slide bgColor='secondary'>
           <Heading size={3} textColor='primary' bold={ false }>Hello There</Heading>
           <Appear><div><Text>Test</Text></div></Appear>
@@ -52,7 +45,7 @@ class Presentation extends React.Component {
         </Slide>
         <Slide bgColor='primary'>
           <Heading size={3} textColor='secondary' bold={ false }>El Fin</Heading>
-          <Image src={images.profile} width={600} />
+          <Image src={ images.profile } width={ 600 } />
         </Slide>
       </Deck>
     );
