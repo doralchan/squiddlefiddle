@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Presentation from './presentation';
+import './styles/index.scss';
+
+import Presentation from './components/presentation';
 
 ReactDOM.render(<Presentation />, document.getElementById('root'));

@@ -1,0 +1,128 @@
+// Helper Styles
+
+$flex: (flex-start, flex-end, center, space-between, space-around, stretch);
+$sides: (top, bottom, left, right);
+$directions: (center, left, right);
+
+@each $side in $sides {
+
+  @for $i from 1 through 12 {
+
+    $multiplier: $i*8px;
+
+    .margin-#{$side}-#{$multiplier} {
+      margin-#{$side}: $multiplier !important;
+    }
+
+    .margin-#{$multiplier} {
+      margin: $multiplier !important;
+    }
+
+    .padding-#{$side}-#{$multiplier} {
+      padding-#{$side}: $multiplier !important
+    }
+
+    .padding-#{$multiplier} {
+      padding: $multiplier !important;
+    }
+
+  }
+
+}
+
+@each $side in $sides {
+
+  .border-#{$side} {
+    border-#{$side}: 1px solid var(--color-gray-light) !important;
+  }
+
+  .border-#{$side}-none {
+    border-#{$side}: none !important;
+  }
+
+  .border-all {
+    border: 1px solid var(--color-gray-light) !important;
+  }
+
+}
+
+@each $direction in $directions {
+
+  .text-#{$direction} {
+    text-align: #{$direction} !important;
+  }
+
+}
+
+@each $i in $flex {
+
+  .content-#{$i} {
+    align-content: #{$i} !important;
+  }
+
+  .items-#{$i} {
+    align-items: #{$i} !important;
+  }
+
+  .justify-#{$i} {
+    justify-content: #{$i} !important;
+  }
+
+}
+
+@for $i from 1 through 40 {
+
+  .grid-row-start-#{$i} {
+    grid-row-start: $i;
+  }
+
+  .grid-row-end-#{$i} {
+    grid-row-end: $i;
+  }
+
+}
+
+
+@for $i from 1 through 6 {
+
+  .flex-#{$i} {
+    flex: #{$i} !important;
+  }
+
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.stretch-img {
+  width: 100% !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-relative {
+  position: relative !important;
+}

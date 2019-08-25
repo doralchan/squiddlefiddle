@@ -23,14 +23,13 @@ class Table extends Component {
 
 Table.Row = class Row extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
     category: PropTypes.string,
     description: PropTypes.string
   }
 
   render() {
     return (
-      <div to={ link } className='table-row'>
+      <div className='table-row'>
         <div className='table-row-cell'>{ this.props.category }</div>
         <div className='table-row-cell'>{ this.props.description }</div>
       </div>
