@@ -1,10 +1,21 @@
+@import '../../styles/breakpoints';
+
 // Cover Styles
 
 .slide {
-  max-width: 1200px !important;
+
+  @media #{$desktopxl} {
+    max-width: 1200px !important;
+  }
+
 }
 
 .cover {
   text-align: left;
-  width: 50%;
+  width: 100%;
+
+  @media #{$desktop} {
+    width: 50%
+  }
+
 }

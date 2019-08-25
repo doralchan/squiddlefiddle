@@ -12,7 +12,8 @@ class Cover extends Component {
     projectNumber: PropTypes.string,
     companyName: PropTypes.oneOf(['Square', 'Gusto', 'AuditFile', 'Freelance']),
     managerNumber: PropTypes.string,
-    engineerNumber: PropTypes.string
+    engineerNumber: PropTypes.string,
+    status: PropTypes.string
   }
 
   static defaultProps = {
@@ -20,20 +21,26 @@ class Cover extends Component {
     projectName: 'Project Name',
     projectNumber: '1',
     managerNumber: '1',
-    engineerNumber: '1'
+    engineerNumber: '1',
+    status: 'Released'
   }
 
   render() {
     return (
       <Slide bgColor='tertiary' className='slide'>
         <div className='cover'>
-          <Heading size={ 6 } textColor='secondary' bold={ false }>{ 'Project ' + this.props.projectNumber }</Heading>
-          <Heading size={ 3 } textColor='primary' bold={ false }>{ this.props.projectName }</Heading>
+          <Heading size={ 6 } textColor='secondary' className='margin-bottom-32px'>
+            { 'Project ' + this.props.projectNumber }
+          </Heading>
+          <Heading size={ 3 } textColor='primary' className='margin-bottom-32px'>
+            { this.props.projectName }
+          </Heading>
           <Table>
+            <Table.Row category='Status' description={ this.props.status } />
             <Table.Row category='Company' description={ this.props.companyName }/>
             <Table.Row category='Product Managers' description={ this.props.managerNumber } />
             <Table.Row category='Engineers' description={ this.props.engineerNumber } />
-            <Table.Row category='Product Designer' description='1' />
+            <Table.Row category='Product Designers' description='1' />
           </Table>
         </div>
       </Slide>

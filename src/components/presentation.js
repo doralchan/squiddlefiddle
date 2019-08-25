@@ -38,7 +38,7 @@ class Presentation extends React.Component {
           <Heading size={4} textColor='secondary'>Bits of Work</Heading>
           <Image src={ images.dots } width={ 80 } />
         </Slide>
-        <Cover projectName='Business Setup' engineerNumber='2' />
+        <Cover status='Beta' projectName='Business Setup' engineerNumber='2' />
         <Slide>
           <Heading size={1} textColor='secondary' className='qa'>Q&A</Heading>
           <Image src={ images.profile } width={ 600 } />
