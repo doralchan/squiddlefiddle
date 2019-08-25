@@ -1,5 +1,5 @@
 import React from 'react';
-import { Deck, Slide, Heading, Image, Appear, Text } from 'spectacle';
+import { Deck, Slide, Heading, Image } from 'spectacle';
 
 import Cover from './cover';
 
@@ -31,16 +31,14 @@ class Presentation extends React.Component {
         transitionDuration={ 500 }
         theme={ theme }>
         <Slide bgColor='secondary'>
-          <Heading size={3} textColor='primary'>Hi Sentry</Heading>
-          <Appear><div><Text textColor='tertiary'>I'm Dora</Text></div></Appear>
+          <Heading size={3} textColor='primary'>Hello There</Heading>
         </Slide>
         <Slide>
           <Heading size={4} textColor='secondary'>Bits of Work</Heading>
           <Image src={ images.dots } width={ 80 } />
         </Slide>
-        <Cover status='Beta' projectName='Business Setup' engineerNumber='2' />
+        <Cover projectStatus='Beta' projectName='Business Setup' engineerNumber='2' />
         <Slide>
-          <Heading size={1} textColor='secondary' className='qa'>Q&A</Heading>
           <Image src={ images.profile } width={ 600 } />
         </Slide>
       </Deck>

@@ -13,7 +13,7 @@ class Cover extends Component {
     companyName: PropTypes.oneOf(['Square', 'Gusto', 'AuditFile', 'Freelance']),
     managerNumber: PropTypes.string,
     engineerNumber: PropTypes.string,
-    status: PropTypes.string
+    projectStatus: PropTypes.string
   }
 
   static defaultProps = {
@@ -22,7 +22,7 @@ class Cover extends Component {
     projectNumber: '1',
     managerNumber: '1',
     engineerNumber: '1',
-    status: 'Released'
+    projectStatus: 'Released'
   }
 
   render() {
@@ -36,8 +36,8 @@ class Cover extends Component {
             { this.props.projectName }
           </Heading>
           <Table>
-            <Table.Row category='Status' description={ this.props.status } />
             <Table.Row category='Company' description={ this.props.companyName }/>
+            <Table.Row category='Status' description={ this.props.projectStatus } />
             <Table.Row category='Product Managers' description={ this.props.managerNumber } />
             <Table.Row category='Engineers' description={ this.props.engineerNumber } />
             <Table.Row category='Product Designers' description='1' />
