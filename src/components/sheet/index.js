@@ -6,7 +6,7 @@ import './style.scss';
 
 class Sheet extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     headingType: PropTypes.oneOf(['Context', 'Analysis', 'Design']),
     headingNumber: PropTypes.string
   }
@@ -42,6 +42,29 @@ class Sheet extends Component {
       </Slide>
     )
   }
+}
+
+Sheet.Section = class Section extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    sectionTitle: PropTypes.string
+  }
+
+  static defaultProps = {
+    question: 'Insert Question'
+  }
+
+  render() {
+    return (
+      <div className='sheet-section'>
+        <Heading size={ 5 } textColor='secondary' className='margin-bottom-16px'>
+          { this.props.sectionTitle }
+        </Heading>
+        { this.props.children }
+      </div>
+    )
+  }
+
 }
 
 export default Sheet;

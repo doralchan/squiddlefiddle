@@ -5,13 +5,17 @@
 .slide-sheet {
   display: grid;
   grid-template-rows: auto 1fr;
-  grid-template-columns: [C1]120px [C2]1fr [C3];
-  height: 750px;
+  grid-template-columns: [C1]100px [C2]1fr [C3]100px;
+  min-height: 650px;
 
   @media #{$desktopxl} {
     max-width: 1200px !important;
   }
 
+}
+
+.slide-sheet-number {
+  margin-left: 0 !important;
 }
 
 .slide-sheet-type {
@@ -20,8 +24,23 @@
 }
 
 .slide-sheet-content {
-  font-family: 'Open Sans';
-  font-size: 0.8em;
   grid-column: C2/C3;
   text-align: left;
+  font-weight: 300;
+}
+
+.sheet-section {
+  margin-top: 40px;
+
+  ul {
+    margin: 0;
+  }
+
+  li, p {
+    font-family: 'Open Sans';
+    font-size: 0.8em;
+    line-height: 1.8em;
+    color: inherit;
+  }
+
 }
