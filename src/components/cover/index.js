@@ -29,7 +29,7 @@ class Cover extends Component {
 
   render() {
     return (
-      <Slide bgColor='tertiary' className='slide'>
+      <Slide bgColor='tertiary' className='slide-cover'>
         <div className='cover'>
           <Heading size={ 6 } textColor='secondary' className='margin-bottom-32px'>
             { 'Project ' + this.props.projectNumber }

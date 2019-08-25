@@ -2,6 +2,7 @@ import React from 'react';
 import { Deck, Slide, Heading, Image } from 'spectacle';
 
 import Cover from './cover';
+import QA from './qa';
 
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -19,7 +20,6 @@ const theme = createTheme(
 );
 
 const images = {
-  profile: require('../assets/profile.svg'),
   dots: require('../assets/dots.svg')
 };
 
@@ -40,9 +40,7 @@ class Presentation extends React.Component {
         <Cover projectStatus='Beta' projectName='Business Setup' engineerNumber='2' />
         <Cover projectNumber='2' projectStatus='Alpha' projectName='Timecards' managerNumber='2' engineerNumber='3' designerNumber='2'/>
         <Cover projectNumber='3' projectName='Chat' companyName='Gusto' />
-        <Slide>
-          <Image src={ images.profile } width={ 600 } />
-        </Slide>
+        <QA />
       </Deck>
     );
   }
