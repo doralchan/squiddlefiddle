@@ -40,7 +40,11 @@ const images = {
   tc5: require('../assets/timecard_1.png'),
   tc6: require('../assets/timecard_2.png'),
   tc7: require('../assets/timecard_3.png'),
-  tc8: require('../assets/timecard_4.png')
+  tc8: require('../assets/timecard_4.png'),
+  sm1: require('../assets/sm_mapping_1.svg'),
+  sm2: require('../assets/sm_mapping_2.svg'),
+  sm3: require('../assets/sm_mapping_3.svg'),
+  sm4: require('../assets/sm_mapping_4.svg')
 };
 
 class Presentation extends React.Component {
@@ -124,6 +128,40 @@ class Presentation extends React.Component {
     )
   }
 
+  renderSummitContext() {
+    return (
+      <Sheet headingType='Context'>
+        <Sheet.Section sectionTitle='What is the problem?'>
+          <List>
+            <ListItem>Lack of unity</ListItem>
+            <ListItem>Reduced likeliness of cross functional</ListItem>
+          </List>
+        </Sheet.Section>
+        <Sheet.Section sectionTitle='What does this mean?'>
+          <Text>
+            Without a centralized design team,
+          </Text>
+        </Sheet.Section>
+      </Sheet>
+    )
+  }
+
+  renderSummitDesign() {
+    return (
+      <Sheet headingType='Design'>
+        <Sheet.Section sectionTitle='What are the strategies?'>
+          <List>
+            <ListItem>Sync with stakeholders early</ListItem>
+            <ListItem>Foster</ListItem>
+          </List>
+        </Sheet.Section>
+        <Sheet.Section sectionTitle='How will we know if it is succesful?'>
+          <Text>Attendance and the creation of an annual design budget</Text>
+        </Sheet.Section>
+      </Sheet>
+    )
+  }
+
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={ 500 } theme={ theme }>
@@ -165,7 +203,17 @@ class Presentation extends React.Component {
           <Image src='https://media.giphy.com/media/fUwOs80ja3sTPpjndh/giphy.gif' width={ 300 } className='margin-bottom-16px' />
           <Heading size={4} textColor='secondary'>Demo Time</Heading>
         </Slide>
-        <Cover projectName='Chat Tool' companyName='Gusto' projectStatus='Released' />
+        <Cover projectName='Design Summit' managerNumber='0' engineerNumber='0' designerNumber='3' companyName='Square' projectStatus='Released' />
+        { this.renderSummitContext() }
+        <Slide className='slide-image' transition={['fade']}><Image src={ images.sm1 } /></Slide>
+        <Slide className='slide-image' transition={['fade']}><Image src={ images.sm2 } /></Slide>
+        { this.renderSummitDesign() }
+        <Slide className='slide-image' transition={['fade']}><Image src={ images.sm3 } /></Slide>
+        <Slide className='slide-image' transition={['fade']}><Image src={ images.sm4 } /></Slide>
+        <Slide>
+          <Image src='https://media.giphy.com/media/3zD0Iymuhx3d6/giphy.gif' width={ 300 } className='margin-bottom-16px' />
+          <Heading size={4} textColor='secondary'>Demo Time</Heading>
+        </Slide>
         <QA />
       </Deck>
     );
