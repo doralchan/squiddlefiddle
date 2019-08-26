@@ -133,13 +133,15 @@ class Presentation extends React.Component {
       <Sheet headingType='Context'>
         <Sheet.Section sectionTitle='What is the problem?'>
           <List>
-            <ListItem>Lack of unity</ListItem>
-            <ListItem>Reduced likeliness of cross functional</ListItem>
+            <ListItem>Design teams are siloed by product</ListItem>
+            <ListItem>No central design org means no central design budget</ListItem>
+            <ListItem>Lots of unshared talent</ListItem>
+            <ListItem>Lack of opportunities to meet cross functionally</ListItem>
           </List>
         </Sheet.Section>
         <Sheet.Section sectionTitle='What does this mean?'>
           <Text>
-            Without a centralized design team,
+            To build a better culture, we have to do it ourselves.
           </Text>
         </Sheet.Section>
       </Sheet>
@@ -152,11 +154,13 @@ class Presentation extends React.Component {
         <Sheet.Section sectionTitle='What are the strategies?'>
           <List>
             <ListItem>Sync with stakeholders early</ListItem>
-            <ListItem>Foster</ListItem>
+            <ListItem>Gather feedback from all creatives by survey</ListItem>
+            <ListItem>Diversify talks and speakers</ListItem>
+            <ListItem>Provide continual inspiration</ListItem>
           </List>
         </Sheet.Section>
         <Sheet.Section sectionTitle='How will we know if it is succesful?'>
-          <Text>Attendance and the creation of an annual design budget</Text>
+          <Text>Large attendance and the creation of an annual design budget</Text>
         </Sheet.Section>
       </Sheet>
     )
