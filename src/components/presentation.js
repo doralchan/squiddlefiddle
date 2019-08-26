@@ -219,6 +219,7 @@ class Presentation extends React.Component {
           <Heading size={4} textColor='secondary'>Demo Time</Heading>
         </Slide>
         <QA />
+        <Slide bgColor='secondary'><Heading size={3} textColor='primary'>Thank You</Heading></Slide>
       </Deck>
     );
   }
