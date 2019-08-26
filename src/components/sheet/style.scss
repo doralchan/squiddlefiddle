@@ -6,7 +6,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: [C1]100px [C2]1fr [C3]100px;
-  min-height: 650px;
+  min-height: 600px;
 
   @media #{$desktopxl} {
     max-width: 1200px !important;

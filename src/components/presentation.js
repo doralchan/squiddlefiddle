@@ -169,7 +169,9 @@ class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={['slide']} transitionDuration={ 500 } theme={ theme }>
-        <Slide bgColor='secondary'><Heading size={2} textColor='primary'>Hello There</Heading></Slide>
+        <Slide bgColor='secondary'>
+          <Heading size={2} textColor='primary'>Hello There</Heading>
+        </Slide>
         <Slide>
           <Heading size={4} textColor='secondary'>Bits of Work</Heading>
           <Image src={ images.dots } width={ 80 } />
