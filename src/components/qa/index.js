@@ -9,7 +9,7 @@ class QA extends Component {
   render() {
     return (
       <Slide bgColor='primary' className='slide-qa'>
-        <Heading size={2} textColor='secondary'>Q & A</Heading>
+        <Heading size={2} textColor='secondary'>Thank You</Heading>
         <Image src={ Profile } width={ 700 } />
       </Slide>
     )

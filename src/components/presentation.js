@@ -174,9 +174,9 @@ class Presentation extends React.Component {
           <Heading size={2} textColor='primary'>Hello There</Heading>
         </Slide>
         <Slide>
-          <Image src={ images.profile_2 } width={ 550 } className='margin-bottom-24px' />
-          <Heading size={4} textColor='secondary'>Bits of Work</Heading>
-          <Image src={ images.dots } width={ 80 } />
+          <Image src={ images.profile_2 } width={ 550 } className='margin-bottom-16px' />
+          <Heading size={4} textColor='secondary' className='margin-bottom-24px'>Bits of Work</Heading>
+          <Image src={ images.dots } width={ 80 } className='margin-bottom-24px'/>
         </Slide>
         <Cover projectName='Business Setup' engineerNumber='2' projectStatus='Beta' />
         { this.renderBusinessSetupContext() }
@@ -223,7 +223,6 @@ class Presentation extends React.Component {
           <Heading size={4} textColor='secondary'>Demo Time</Heading>
         </Slide>
         <QA />
-        <Slide bgColor='secondary'><Heading size={3} textColor='primary'>Thank You</Heading></Slide>
       </Deck>
     );
   }
