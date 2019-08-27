@@ -21,6 +21,7 @@ const theme = createTheme(
 );
 
 const images = {
+  profile_2: require('../assets/profile_2.svg'),
   dots: require('../assets/dots.svg'),
   bs0: require('../assets/business_setup_0.png'),
   bs1: require('../assets/bs_mapping_1.svg'),
@@ -173,6 +174,7 @@ class Presentation extends React.Component {
           <Heading size={2} textColor='primary'>Hello There</Heading>
         </Slide>
         <Slide>
+          <Image src={ images.profile_2 } width={ 550 } className='margin-bottom-24px' />
           <Heading size={4} textColor='secondary'>Bits of Work</Heading>
           <Image src={ images.dots } width={ 80 } />
         </Slide>
