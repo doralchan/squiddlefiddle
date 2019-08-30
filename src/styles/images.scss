@@ -4,8 +4,8 @@
 
 .slide-image {
 
-  @media #{$desktopxl} {
-    max-height: 100% !important;
+  @media #{$desktop} {
+    max-height: none !important;
   }
 
 }

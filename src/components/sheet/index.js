@@ -7,7 +7,7 @@ import './style.scss';
 class Sheet extends Component {
   static propTypes = {
     children: PropTypes.node,
-    headingType: PropTypes.oneOf(['Context', 'Design']),
+    headingType: PropTypes.oneOf(['Context', 'Design','Learnings']),
     headingNumber: PropTypes.string
   }
 
