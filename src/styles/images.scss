@@ -9,3 +9,16 @@
   }
 
 }
+
+.slide-intro {
+  position: relative;
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  height: 320px;
+
+  span {
+    position: absolute;
+  }
+
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Deck, Slide, Heading, Image, List, ListItem, Text } from 'spectacle';
+import { Deck, Slide, Heading, Image, List, ListItem, Text, Appear } from 'spectacle';
 
 import Cover from './cover';
 import Close from './close';
@@ -24,6 +24,8 @@ const theme = createTheme(
 const images = {
   profile_2: require('../assets/profile_2.svg'),
   dots: require('../assets/dots.svg'),
+  identification: require('../assets/identification.svg'),
+  focus: require('../assets/focus.svg'),
   stats: require('../assets/onboarding_stats.png'),
   bs0: require('../assets/business_setup_0.png'),
   bs1: require('../assets/bs_mapping_1.svg'),
@@ -234,6 +236,19 @@ class Presentation extends React.Component {
       <Deck transition={['slide']} transitionDuration={ 500 } theme={ theme }>
         <Slide bgColor='secondary'>
           <Heading size={2} textColor='primary'>Hello There</Heading>
+        </Slide>
+        <Slide className='slide-intro' style={{backgroundColor: '#63C5A8'}}>
+          <Appear>
+            <span>
+              <Image src={ images.identification } width={ 420 } />
+            </span>
+          </Appear>
+          <Appear>
+            <span>
+              <Image src={ images.focus } width={ 420 } />
+              <Heading textColor='secondary' size={ 5 } className='padding-8px'>I'm Dora.</Heading>
+            </span>
+          </Appear>
         </Slide>
         <Slide>
           <Image src={ images.profile_2 } width={ 550 } className='margin-bottom-16px' />
