@@ -246,7 +246,7 @@ class Presentation extends React.Component {
           <Appear>
             <span>
               <Image src={ images.focus } width={ 420 } />
-              <Heading textColor='secondary' size={ 5 } className='padding-8px'>I'm Dora.</Heading>
+              <Heading textColor='secondary' size={ 5 } className='padding-8px'>I'm Dora Chan.</Heading>
             </span>
           </Appear>
         </Slide>
