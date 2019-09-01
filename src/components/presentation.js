@@ -238,31 +238,23 @@ class Presentation extends React.Component {
           <Heading size={2} textColor='primary'>Hello There</Heading>
         </Slide>
         <Slide className='slide-intro' style={{backgroundColor: '#63C5A8'}}>
-          <span>
-            <Image src={ images.identification } width={ 440 } />
-          </span>
+          <span><Image src={ images.identification } width={ 440 } /></span>
           <Appear>
             <span>
               <Image src={ images.focus } width={ 440 } />
-              <Heading textColor='secondary' size={ 5 } className='padding-16px' style={{backgroundColor: '#63C5A8'}}>
-                Product Designer
-              </Heading>
+              <Heading textColor='secondary' size={ 5 } className='padding-16px' style={{backgroundColor: '#63C5A8'}}>Product Designer</Heading>
             </span>
           </Appear>
           <Appear>
             <span>
               <Image src={ images.focus } width={ 440 } />
-              <Heading textColor='secondary' size={ 5 } className='padding-16px' style={{backgroundColor: '#63C5A8'}}>
-                Front End Enthusiast
-              </Heading>
+              <Heading textColor='secondary' size={ 5 } className='padding-16px' style={{backgroundColor: '#63C5A8'}}>Front End Enthusiast</Heading>
             </span>
           </Appear>
           <Appear>
             <span>
               <Image src={ images.focus } width={ 440 } />
-              <Heading textColor='secondary' size={ 5 } className='padding-16px' style={{backgroundColor: '#63C5A8'}}>
-                Boardgame Hoarder
-              </Heading>
+              <Heading textColor='secondary' size={ 5 } className='padding-16px' style={{backgroundColor: '#63C5A8'}}>Boardgame Hoarder</Heading>
             </span>
           </Appear>
         </Slide>
